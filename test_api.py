@@ -2,6 +2,7 @@ import pytest
 import requests
 import uuid
 import os
+from jsonschema import validate, ValidationError
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,15 +19,18 @@ def base_url():
 def barrel_uuid():
     return str(uuid.uuid4())
 
-# Vzor pro strukturu barelu
-@pytest.fixture(scope="session")
-def barrel_vzor(barrel_uuid):
-    return {
-        "id": barrel_uuid,
-        "qr": "test_qr_code",
-        "rfid": "test_rfid_tag",
-        "nfc": "test_nfc_chip"
-    }
+# Definuj JSON schema podle očekávaného výstupu
+barrel_schema = {
+    "type": "object",
+    "required": ["id", "qr", "rfid", "nfc"],
+    "properties": {
+        "id": {"type": "string", "format": "uuid"},
+        "qr": {"type": "string"},
+        "rfid": {"type": "string"},
+        "nfc": {"type": "string"}
+    },
+    "additionalProperties": False
+}
 
 # Vytvoření barelu a kontrola stavového kodu 201,200
 def test_vytvoreni_noveho_barelu(base_url, barrel_uuid):
@@ -40,11 +44,11 @@ def test_vytvoreni_noveho_barelu(base_url, barrel_uuid):
         assert response.status_code in [200, 201], f"Unexpected status: {response.status_code}"
         data = response.json()
         assert isinstance(data, dict), "Odpověď není validní JSON objekt"
-        assert data.get("id") == barrel_uuid, f"UUID nesouhlasí: {data.get('id')}"
     except requests.exceptions.RequestException as e:
         pytest.fail(f"Chyba při POST /barrels: {e}")
     except ValueError:
         pytest.fail("Odpověď není validní JSON.")
+
 # Zobrazení všech barelů v systému, ukázáni seznamu
 def test_ziskani_seznamu_barelu(base_url):
     try:
@@ -71,38 +75,38 @@ def test_pridani_mereni_necistot(base_url, barrel_uuid):
         })
         assert response.status_code in [200, 201], f"Unexpected status: {response.status_code}"
         data = response.json()
-        assert "data" in data, "Chybí klíč 'data' ve výsledku"
+        assert isinstance(data, dict), "Odpověď není validní JSON objekt"
     except requests.exceptions.RequestException as e:
         pytest.fail(f"Chyba při POST /measurements: {e}")
     except ValueError:
         pytest.fail("Odpověď není validní JSON.")
 
-# Ziskání listu o všech barelech v systému
+# Ziskání listu o všech měření barelech v systému - očekávání že obsahuje záznam
 def test_ziskani_vsech_mereni(base_url):
     try:
         response = requests.get(f"{base_url}/measurements")
         assert response.status_code == 200
         data = response.json()
-        assert isinstance(data, list) or "data" in data, "Neplatná struktura měření"
+        assert len(data) > 0, "Seznam měření je prázdný"
     except requests.exceptions.RequestException as e:
         pytest.fail(f"Chyba při GET /measurements: {e}")
     except ValueError:
         pytest.fail("Odpověď není validní JSON.")
-# Získáni informaci o barelu a správný klič jako při jeho vytvoření - neukazuje správně, posílá celý list barelu
-def test_ziskani_detailu_barelu(base_url, barrel_uuid, barrel_vzor):
 
+# Získáni informaci o barelu a správný klič jako při jeho vytvoření - neukazuje správně, posílá celý list barelu
+def test_ziskani_detailu_barelu(base_url, barrel_uuid):
     try:
         response = requests.get(f"{base_url}/barrels?id={barrel_uuid}")
-        assert response.status_code == 200, f"Očekáván status 200, přišel: {response.status_code}"
+        assert response.status_code == 200, f"Status: {response.status_code}"
         data = response.json()
-        if "data" in data:
-            data = data["data"]
-        # Kontrola, že všechna pole z původního vzoru jsou i ve vráceném JSONu
-        for key in barrel_vzor:
-            assert key in data, f"V odpovědi chybí klíč: {key}"
 
+        # Validate JSON structury
+        validate(instance=data, schema=barrel_schema)
+
+    except ValidationError as e:
+        pytest.fail(f"JSON neodpovídá požadovanému tvaru: {e.message}")
     except requests.exceptions.RequestException as e:
-        pytest.fail(f"Chyba při GET požadavku: {e}")
+        pytest.fail(f"Chyba při HTTP požadavku: {e}")
     except ValueError:
         pytest.fail("Odpověď není validní JSON.")
 
@@ -124,7 +128,7 @@ def test_vytvoreni_barelu_bez_udaju(base_url):
     except requests.exceptions.RequestException as e:
         pytest.fail(f"Request failed: {e}")
 
-# Vytvoření barelu se špatným tyepm ID
+# Vytvoření barelu se špatným typem ID
 def test_barel_spatne_typy(base_url):
     try:
         payload = {

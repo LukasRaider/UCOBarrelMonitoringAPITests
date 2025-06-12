@@ -1,30 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a099123-d897-428f-9397-8cef5bab5c36" name="Changes" comment="" />
+    <list default="true" id="8a099123-d897-428f-9397-8cef5bab5c36" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_update.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "LukasRaider"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LukasRaider/UCOBarrelMonitoringAPITests.git&quot;,
+    &quot;accountId&quot;: &quot;3a948cbe-6c92-442f-a28f-15f79fe2c803&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2yLzUpYeQ0DF1UYdBwWkKry5ysl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for APITests.test_barel_spatne_typy.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_pridani_mereni_necistot.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_smazani_barelu.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_vytvoreni_barelu_bez_udaju.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_vytvoreni_mereni_se_spatnymi_udaji.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_vytvoreni_noveho_barelu.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_ziskani_detailu_barelu.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_ziskani_seznamu_barelu.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for APITests.test_ziskani_vsech_mereni.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_api.test_vytvoreni_noveho_barelu.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_api.test_ziskani_detailu_barelu.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_update.test_vytvoreni_noveho_barelu.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Python tests.Python tests for test_api.test_ziskani_detailu_barelu">
+    <configuration name="Python tests for test_api.test_barel_spatne_typy" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="UCOBarrelMonitoringAPITests" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_barel_spatne_typy&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_api.test_vytvoreni_mereni_se_spatnymi_udaji" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="UCOBarrelMonitoringAPITests" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_vytvoreni_mereni_se_spatnymi_udaji&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_api.test_vytvoreni_noveho_barelu" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="UCOBarrelMonitoringAPITests" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_vytvoreni_noveho_barelu&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_api.test_ziskani_detailu_barelu" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="UCOBarrelMonitoringAPITests" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.test_ziskani_detailu_barelu&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_update.test_vytvoreni_noveho_barelu" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="UCOBarrelMonitoringAPITests" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_update.test_vytvoreni_noveho_barelu&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_api.test_ziskani_detailu_barelu" />
+        <item itemvalue="Python tests.Python tests for test_api.test_vytvoreni_noveho_barelu" />
+        <item itemvalue="Python tests.Python tests for test_update.test_vytvoreni_noveho_barelu" />
+        <item itemvalue="Python tests.Python tests for test_api.test_vytvoreni_mereni_se_spatnymi_udaji" />
+        <item itemvalue="Python tests.Python tests for test_api.test_barel_spatne_typy" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -42,5 +172,8 @@
       <updated>1749628660119</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
